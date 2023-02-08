@@ -52,6 +52,10 @@ And we generated the docker-compose files and scaled the invoice service up to 2
 
 ![Docker Compose](./docker_compose_scale_up.JPG "Docker Compose")
 
+We were able to observe the two invoice replicas in the JHipster Registry:
+
+![Invoice Replicas](./scaling_up_registry.JPG "Invoice Replicas")
+
 
 
 ## Monitoring
