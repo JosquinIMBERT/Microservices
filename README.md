@@ -13,7 +13,6 @@
 Manually started the JHipster registry:
 
 ![JHipster Registry Started](./microservice_jhipster_registry_running.JPG "JHipster Registry Manual Start")
-<> ![JHipster Registry Started](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true "JHipster Registry Manual Start")
 
 Manually started the gateway:
 
@@ -67,9 +66,3 @@ We also started Grafana, added a Prometheus source to it, and ran a CPU usage qu
 
 ![Grafana Prometheus](./grafana_prometheus.JPG "Grafana Prometheus")
 
-
-
-
-
-
-![Todo](./todo "Todo")
