@@ -1,3 +1,4 @@
+![kubernetes](https://user-images.githubusercontent.com/124881148/218196668-293bc786-827a-4960-b061-2de8e80cd697.png)
 # Cloud Computing - Microservices
 
 ## Students
@@ -103,6 +104,7 @@ Using the shell script, we apply a Kubernetes configuration to the cluster, thro
 
 The services are deployed in the cluster:
 
-[Kubernetes](./kubernetes.PNG "Kubernetes")
+![kubernetes](https://user-images.githubusercontent.com/124881148/218196735-0c801bd9-7905-47f8-ad5a-08e0fe5d5cc1.png)
 
-We can retrieve information about the services in a Kubernetes cluster.
+We can retrieve information about the services in a Kube
+rnetes cluster.
