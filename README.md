@@ -106,5 +106,7 @@ The services are deployed in the cluster:
 
 ![kubernetes](https://user-images.githubusercontent.com/124881148/218196735-0c801bd9-7905-47f8-ad5a-08e0fe5d5cc1.png)
 
-We can retrieve information about the services in a Kube
-rnetes cluster.
+We can retrieve information about the services in a Kubernetes cluster. We can see the cluster they are deployed on, the IPs and the ports. We have the following results: 
+
+![services_namespace](https://user-images.githubusercontent.com/124881148/218197180-0602e0dc-d7de-4f3e-b5cb-3c5e9090b9fe.png)
+
