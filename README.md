@@ -89,3 +89,6 @@ We also started Grafana, added a Prometheus source to it, and ran a CPU usage qu
 
 ![Grafana Prometheus](./grafana_prometheus.JPG "Grafana Prometheus")
 
+
+
+## Kubernetes Part
