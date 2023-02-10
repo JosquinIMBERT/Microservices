@@ -3,7 +3,7 @@
 ## Students
 
 - Mpoki MWAISELA - mail: mpoki.mwaisela@grenoble-inp.org - GitHub ID: TODO
-- Almo CUCI - mail: almo.cuci@grenoble-inp.org - GitHub ID: TODO
+- Almo CUCI - mail: almo.cuci@grenoble-inp.org - GitHub ID: cucialmo
 - Josquin IMBERT - mail: josquin.imbert@etu.univ-grenoble-alpes.fr - GitHub ID: JosquinIMBERT
 
 ## First Manual Deployment
