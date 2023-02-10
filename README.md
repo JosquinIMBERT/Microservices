@@ -1,4 +1,3 @@
-![kubernetes](https://user-images.githubusercontent.com/124881148/218196668-293bc786-827a-4960-b061-2de8e80cd697.png)
 # Cloud Computing - Microservices
 
 ## Students
@@ -109,4 +108,10 @@ The services are deployed in the cluster:
 We can retrieve information about the services in a Kubernetes cluster. We can see the cluster they are deployed on, the IPs and the ports. We have the following results: 
 
 ![services_namespace](https://user-images.githubusercontent.com/124881148/218197180-0602e0dc-d7de-4f3e-b5cb-3c5e9090b9fe.png)
+
+Moreover, we could try to expose one of the services of the cluster, making it accessible from outside the cluster. In this case, the service being exposed is named jhipster-registry. The service should be exposed as a NodePort. A NodePort is a type of service that allows you to access the service from outside the cluster by using the IP address of any of the nodes in the cluster and a specific port number. The exposed service will be named exposed-registry.
+
+![expose_replicate](https://user-images.githubusercontent.com/124881148/218199980-6237d956-ac64-4656-b02b-98291d80cb84.png)
+
+
 
