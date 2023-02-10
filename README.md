@@ -6,23 +6,38 @@
 - Almo CUCI - mail: almo.cuci@grenoble-inp.org - GitHub ID: cucialmo
 - Josquin IMBERT - mail: josquin.imbert@etu.univ-grenoble-alpes.fr - GitHub ID: JosquinIMBERT
 
-## First Manual Deployment
+## First Local Deployment
 
 ### Registry and Gateway
 
-Manually started the JHipster registry:
+The architecture of the application was composed of the following parts: 
+
+1. JHipster API Gateway, a component in the JHipster microservice architecture that serves as an entry point for client applications. It acts as a reverse proxy for microservices, routing requests from clients to the appropriate microservice and providing centralized security, monitoring, and logging functionality. JHipster API Gateway, provides a single access point for clients.
+2. JHipster Service Registry, another component in the JHipster microservice architecture that acts as a registry for all microservices in the system. It provides a central location where the location of all microservices can be stored and updated dynamically. It also provides information about the available microservices to clients, including their current status, endpoint locations, and metadata.
+3. One microservice called productorder which is using a relational mysql database.
+4. One microservice called invoice which is using another relational postgresql database.
+5. One microservice called notification using a non-relational mongodb database.
+
+Single Page Application (SPA) frontend will communicate with the microservices through API Gateway, since the later acts as a reverse proxy and a single entry point for all incoming requests from the frontend.
+
+We create the respective JHipster projects for Gateway, Service Registry, productorder, invoice, notification which are going to be deployed manually one after the other.
+
+Launching the JHipster registry locally:
 
 ![JHipster Registry Started](./microservice_jhipster_registry_running.JPG "JHipster Registry Manual Start")
 
-Manually started the gateway:
+Launching the gateway with a development environment/profile configuration:
 
 ![Gateway Started](gateway_running.JPG "Gateway Manual Start")
 
-Browse the application:
+Since the Gateway is up now, the SPA fronted is accessible and we can browse the application.
+
+Accessing the application (localhost:8080):
 
 ![Application](./microservice_app.JPG "Application")
 
-Browse the service registry console:
+
+Accessing the Service Registry (localhost:8761):
 
 ![JHipster Registry 1](./jhipster_registry_1.JPG "JHipster Registry 1")
 ![JHipster Registry 2](./jhipster_registry_2.JPG "JHipster Registry 2")
@@ -30,7 +45,7 @@ Browse the service registry console:
 
 ### Microservices
 
-We were able to generate the new application schema and to manually start the microservices.
+Recalling the projects we created previously, using Gradle (the automation tool) we run the productorder, notifications and invoice projects into the microservices. Those microservices lack the front-end, so that is why we create a route in the API Gateway that maps to the frontend of the microservices.
 
 Once we did these steps, we were able to browse the application:
 
@@ -40,9 +55,13 @@ And to see the microservices in the registry's web interface:
 
 ![Registered Microservices](./jhipster_registry_services_up.JPG "Registered Microservices")
 
+While interacting with the application, if one of the microservices is stopped, then the other microservices, gateway and the registy will be not affected, they will continue to be up. Meanwhile, on the service registry, the microservice that failed, is going to disappear from the list.
 
 
 ## Docker generation
+
+Refactoring the schema of an application in three microservices means dividing the application's functionalities into smaller, independent services. This allows the different parts of the application to be developed, deployed, and maintained separately. The source code for each microservice can then be generated using JHipster. The generated source code includes the necessary boilerplate code and configurations for the microservice to function independently. 
+For each microservice and the gateway frontend, we import the jdl files in into our particular JHipster project. The JDL is a high-level description of the application's entities and the relationships between them.
 
 We generated the docker images for our microservices:
 
