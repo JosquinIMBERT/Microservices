@@ -111,7 +111,7 @@ We can retrieve information about the services in a Kubernetes cluster. We can s
 
 Moreover, we could try to expose one of the services of the cluster, making it accessible from outside the cluster. In this case, the service being exposed is named jhipster-registry. The service should be exposed as a NodePort. A NodePort is a type of service that allows you to access the service from outside the cluster by using the IP address of any of the nodes in the cluster and a specific port number. The exposed service will be named exposed-registry.
 
-![expose_replicate](https://user-images.githubusercontent.com/124881148/218199980-6237d956-ac64-4656-b02b-98291d80cb84.png)
+![expose_replicate](https://user-images.githubusercontent.com/124881148/218204390-c01d3768-43de-428e-b62c-e744ccb52907.png)
 
 
 
