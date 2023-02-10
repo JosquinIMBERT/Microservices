@@ -2,7 +2,7 @@
 
 ## Students
 
-- Mpoki MWAISELA - mail: mpoki.mwaisela@grenoble-inp.org - GitHub ID: MpokiAbel
+- Mpoki MWAISELA - mail: mpoki.mwaisela@grenoble-inp.org - GitHub ID: TODO
 - Almo CUCI - mail: almo.cuci@grenoble-inp.org - GitHub ID: cucialmo
 - Josquin IMBERT - mail: josquin.imbert@etu.univ-grenoble-alpes.fr - GitHub ID: JosquinIMBERT
 
@@ -92,3 +92,17 @@ We also started Grafana, added a Prometheus source to it, and ran a CPU usage qu
 
 
 ## Kubernetes Part
+
+As the steps earlier, we create another JHipster project now, to be deployed in Kubernetes, with all the necessary files needed. Previously, we also created the containerized images for the microservices and the gateway, so what is left to do is to push those images into the docker public registry, in the repository called "masteringmicroservice", to be able to use those images in different environments, such as the Kubernetes cluster opposed to the local deployment we managed to do earlier.
+
+![docker_images](https://user-images.githubusercontent.com/124881148/218195940-ff4feb85-8bba-4683-adeb-ae0fc9ea2e1b.png)
+
+
+Next step is creating manually the cluster as guided on the tutorial in the area "europe-west1-b" and name it "tuto-cluster". Then, we retrieve the credentials for a Google Kubernetes Engine (GKE) cluster that we created. The retrieved credentials are used to connect to the cluster and manage it using the Kubernetes command-line tool kubectl. Now, we can interact with the resources in our cluster, such as deploy and manage containers, monitor logs etc.
+Using the shell script, we apply a Kubernetes configuration to the cluster, through the kubectl command, that is used to create or update resources in a Kubernetes cluster.The command takes a Kubernetes manifest file as input, which defines the desired state of your cluster, and updates the cluster to match the desired state. If the resources specified in the manifest file do not exist in the cluster, they will be created. If they already exist, they will be updated to match the specified state.
+
+The services are deployed in the cluster:
+
+[Kubernetes](./kubernetes.PNG "Kubernetes")
+
+We can retrieve information about the services in a Kubernetes cluster.
